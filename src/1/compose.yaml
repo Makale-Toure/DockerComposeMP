@@ -1,0 +1,8 @@
+services:
+  hello:
+    build:
+      context: .
+      dockerfile: ./image/Dockerfile
+    volumes:
+      - ./msg.txt:/opt/msg.txt:ro
+    command: cat /opt/msg.txt
